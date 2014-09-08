@@ -1,6 +1,7 @@
 import libtcodpy as libtcod
-	
-libtcod.console_set_custom_font('fonts\\dullard14x14.png',libtcod.FONT_LAYOUT_TCOD,32,32)
+import os
+
+libtcod.console_set_custom_font(os.path.join('fonts', 'dullard14x14.png'),libtcod.FONT_LAYOUT_TCOD, 32, 32)
 
 libtcod.console_init_root(80,50,'test',False)
 testconsole = libtcod.console_new(80,50)

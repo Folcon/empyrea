@@ -516,4 +516,4 @@ def MakeName(langdict):
 
     name = ''.join(name).capitalize()
     return name
-    
+

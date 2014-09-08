@@ -1,6 +1,6 @@
 import os, random, re
 
-def MakeLang(langfile = None,MINLEN = 3,MAXLEN = 9,caphy = True):
+def MakeLang(langfile = None, MINLEN = 3, MAXLEN = 9, caphy = True):
     langdict = {}
     startpairs = []
     starttrios = []
@@ -9,13 +9,13 @@ def MakeLang(langfile = None,MINLEN = 3,MAXLEN = 9,caphy = True):
 
     langdict['caphy'] = caphy
 
-    namedir = '.\\data\\name'
+    namedir = os.path.join('.', 'data', 'name')
     if not langfile:        
         langdir = os.listdir(namedir)
         langdir.remove('verboten.txt')
-        filedir = namedir + '\\' + random.choice(langdir)
+        filedir = os.path.join(namedir, random.choice(langdir))
     else:
-        filedir = namedir + '\\' + langfile + '.txt'
+        filedir = os.path.join(namedir, langfile + '.txt')
 
     langfile = open(filedir, 'r')
     namelist = map(lambda x: x.strip('\n'), langfile.readlines())

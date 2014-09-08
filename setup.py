@@ -8,15 +8,15 @@ import libtcodpy
 
 REMOVE_BUILD_ON_EXIT = True
 PYGAMEDIR = os.path.split(pygame.base.__file__)[0]
-SDL_DLLS = glob.glob(os.path.join(PYGAMEDIR,'*.dll'))
+SDL_DLLS = glob.glob(os.path.join(PYGAMEDIR, '*.dll'))
 VERSION = '0.2'
 AUTHOR_NAME = 'David Hagar'
 AUTHOR_EMAIL = 'dm.hagar@gmail.com'
 AUTHOR_URL = "http://cultrl.wordpress.com"
 PRODUCT_NAME = "Cult"
-SCRIPT_MAIN = 'C:\\Cult\\cult.py' 
+SCRIPT_MAIN = os.path.join('C:', 'Cult', 'cult.py')
 VERSIONSTRING = PRODUCT_NAME + " ALPHA " + VERSION + ' by D.M. Hagar'
-ICONFILE = 'C:\\Cult\\image\\ico\\cult.ico'
+ICONFILE = os.path.join('C:', 'Cult', 'image', 'ico', 'cult.ico')
 
 
 MODULE_EXCLUDES =[
