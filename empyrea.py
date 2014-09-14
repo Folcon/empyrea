@@ -8052,7 +8052,7 @@ class World(threading.Thread):
                     wgpic = libtcod.image_from_console(wgwindow)
                     libtcod.image_save(wgpic, os.path.join('.', 'image', 'gfx', 'worldgen.png'))
                 break
-            except WindowsError:
+            except OSError:
                 pass
         
 
@@ -8073,7 +8073,7 @@ class World(threading.Thread):
                 heightpic = libtcod.image_from_console(testconsole)
                 libtcod.image_save(heightpic, os.path.join('.', 'image', 'gfx', 'hmap.png'))
                 break
-            except WindowsError:
+            except OSError:
                 pass
 
         NoKeys = False
@@ -8961,7 +8961,7 @@ class WorldNaming(threading.Thread):
                     wgnpic = libtcod.image_from_console(wgwindow)
                     libtcod.image_save(wgnpic, os.path.join('.', 'image', 'gfx', 'worldgenpn.png'))
                 break
-            except WindowsError:
+            except OSError:
                 pass
 
         NoKeys = False
@@ -11784,7 +11784,7 @@ class WorldHistory(threading.Thread):
                     wgcpic = libtcod.image_from_console(wgwindow)
                     libtcod.image_save(wgcpic, os.path.join('.', 'image', 'gfx', 'worldgenpc.png'))
                 break
-            except WindowsError:
+            except OSError:
                 pass
 
         NoKeys = False
